@@ -1,0 +1,9 @@
+# Données GTFS brutes (volumineuses, téléchargeables)
+data/raw/
+# Sauvegardes mongodump
+dump/
+# Identifiants Atlas
+.env
+# Python
+__pycache__/
+.venv/
