@@ -1,0 +1,37 @@
+1. Premier document d'un filtre qui en renvoie plusieurs
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+2. Incrémenter une valeur dans tous les documents
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2503,
+  modifiedCount: 2503,
+  upsertedCount: 0
+}
+3. Ajouter un élément à un tableau d'objets imbriqués
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+4. Renommer un champ dans tous les documents
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 262,
+  modifiedCount: 262,
+  upsertedCount: 0
+}
+5. Supprimer toutes les valeurs d'une collection (sur une copie)
+{
+  acknowledged: true,
+  deletedCount: 2503
+}

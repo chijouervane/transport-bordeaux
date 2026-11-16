@@ -1,0 +1,9 @@
+1. Index composé : ligne puis retard décroissant
+Avant : 2503 documents lus
+Après : 244 documents lus
+2. Index sur le tableau des arrêts (multikey)
+Avant : 2503 documents lus
+Après : 702 documents lus
+3. Index unique sur le code de station
+Avant : 262 documents lus
+Après : 1 documents lus
