@@ -1,0 +1,81 @@
+1. Un document par son _id
+{
+  _id: ObjectId('6ad622cedd3a533fa6584133'),
+  station_code: 'TSJEAN',
+  name: 'Gare Saint-Jean',
+  city_code: '33063',
+  lines: [
+    'C',
+    'D',
+    'F'
+  ],
+  accessible: true,
+  location: {
+    type: 'Point',
+    coordinates: [
+      -0.556826,
+      44.825917
+    ]
+  },
+  daily_passengers: 6502
+}
+2. Un document par identifiant métier
+{
+  line_name: 'Tram C',
+  origin: 'Villenave Pyrénées',
+  destination: 'Parc des Expositions',
+  departure_time: ISODate('2026-10-13T05:55:44.000Z')
+}
+3. Tri sur deux champs : par ligne, puis par heure de départ
+[
+  {
+    line_code: '951',
+    departure_time: ISODate('2026-10-13T05:00:00.000Z')
+  },
+  {
+    line_code: '951',
+    departure_time: ISODate('2026-10-13T05:00:00.000Z')
+  },
+  {
+    line_code: '951',
+    departure_time: ISODate('2026-10-13T05:20:00.000Z')
+  },
+  {
+    line_code: '951',
+    departure_time: ISODate('2026-10-13T05:20:00.000Z')
+  },
+  {
+    line_code: '951',
+    departure_time: ISODate('2026-10-13T05:40:00.000Z')
+  }
+]
+4. Trois documents, un seul champ affiché
+[
+  {
+    name: 'Collège Saint-André'
+  },
+  {
+    name: 'Barrière de Toulouse'
+  },
+  {
+    name: 'Barrière de Bègles'
+  }
+]
+5. $gt : trajets prévus en plus de 60 minutes
+740
+6. $and : trams arrivés avec plus de 10 minutes de retard
+48
+7. $regex : stations dont le nom commence par Sainte (sans limit)
+[
+  {
+    name: 'Sainte Catherine'
+  },
+  {
+    name: 'Sainte Germaine'
+  },
+  {
+    name: 'Sainte Croix'
+  }
+]
+Bonus. $expr : trajets plus longs que prévu
+2157

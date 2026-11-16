@@ -1,0 +1,89 @@
+1. La troisième collection : _id = nombre de lettres du mode
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': 3,
+    '1': 4,
+    '2': 6
+  }
+}
+2. La référence, créée par un update : mode_id = nombre de lettres du champ mode
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2503,
+  modifiedCount: 2503,
+  upsertedCount: 0
+}
+3. Vérification : nombre de trajets par mode et par mode_id
+[
+  {
+    _id: {
+      mode: 'bateau',
+      mode_id: 6
+    },
+    trajets: 166
+  },
+  {
+    _id: {
+      mode: 'tram',
+      mode_id: 4
+    },
+    trajets: 1862
+  },
+  {
+    _id: {
+      mode: 'bus',
+      mode_id: 3
+    },
+    trajets: 475
+  }
+]
+4. Le trajet (parent) avec son mode (enfant)
+[
+  {
+    line_name: 'Tram C',
+    origin: 'Villenave Pyrénées',
+    destination: 'Parc des Expositions',
+    mode_id: 4,
+    mode_details: [
+      {
+        _id: 4,
+        name: 'tram',
+        description: 'Tramway, lignes A à F',
+        lines: [
+          {
+            code: 'A',
+            name: 'Tram A',
+            color: '#831F82'
+          },
+          {
+            code: 'B',
+            name: 'Tram B',
+            color: '#E50040'
+          },
+          {
+            code: 'C',
+            name: 'Tram C',
+            color: '#D35098'
+          },
+          {
+            code: 'D',
+            name: 'Tram D',
+            color: '#9262A3'
+          },
+          {
+            code: 'E',
+            name: 'Tram E',
+            color: '#967651'
+          },
+          {
+            code: 'F',
+            name: 'Tram F',
+            color: '#F08700'
+          }
+        ]
+      }
+    ]
+  }
+]
